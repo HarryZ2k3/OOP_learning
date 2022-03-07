@@ -10,3 +10,8 @@ class CPhanSo
     public:
         ~CPhanSo();//phuong thuc pha huy (destructor)
 };
+
+CPhanSo::~CPhanSO()
+{
+    return;
+}
