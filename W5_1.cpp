@@ -15,14 +15,14 @@ class CPhanSo
 
 CPhanSo::CPhanSo()
 {
-    int = 0;
-    int = 1;
+    tu = 0;
+    mau = 1;
 }
 
 CPhanSo::CPhanSo(const CPhanSo&x)
 {
     tu = x.tu;
-    ma = x.mau;
+    mau = x.mau;
 }
 
 CPhanSo::CPhanSo(int t,int m)
