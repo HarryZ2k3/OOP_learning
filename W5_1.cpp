@@ -10,7 +10,7 @@ class CPhanSo
     public:
     CPhanSo(); // phuong thuc thietlap mac dinh (default constructor)
     CPhanSo(int, int); // phuong thuc thiet lap khi biet thong tin (constructor)
-    CPhanSo(const CPhanSo&); // Phuong thuc thiet lap sao chep
+    CPhanSo(const CPhanSo&); // Phuong thuc thiet lap sao chep (copy constructor)
 };
 
 CPhanSo::CPhanSo()
@@ -19,7 +19,14 @@ CPhanSo::CPhanSo()
     int = 1;
 }
 
-CPhanSo::CPhanSO(int &a, int &b)
+CPhanSo::CPhanSo(const CPhanSo&x)
 {
-    
+    tu = x.tu;
+    ma = x.mau;
+}
+
+CPhanSo::CPhanSo(int t,int m)
+{
+    tu = t;
+    mau = m;
 }
