@@ -11,7 +11,7 @@ class CPhanSo
         ~CPhanSo();//phuong thuc pha huy (destructor)
 };
 
-CPhanSo::~CPhanSO()
+CPhanSo::~CPhanSo()
 {
     return;
 }
