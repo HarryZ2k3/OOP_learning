@@ -41,7 +41,7 @@ int main()
     HOCSINH hs;
     getinfo(hs);
     process(hs);
-    isNumber(hs) ? cout <<"Nhap sai, nhap lai\n" : cout << "";
+    isNumber(hs) ? cout <<"Nhap sai, nhap lai\n" : cout << ""; //funny pseudo code
     print(hs);
     return 1;
 }
