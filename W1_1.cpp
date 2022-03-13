@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 using namespace std;
 
 string hoten;
@@ -42,3 +42,35 @@ int main()
     print(ht,tb);
     return 1;
 }
+
+/*void SieveOfEratosthenes(int n)
+{
+    int prime[n + 1];
+    memset(prime, 0, sizeof(prime));
+ 
+    for (int p = 2; p * p <= n; p++)
+    {
+        if (prime[p] == 0)
+        {
+            for (int i = p * p; i <= n; i += p)
+                prime[i] = 1;
+        }
+    }
+ 
+    // Print all prime numbers
+    for (int p = 2; p <= n; p++)
+        if (prime[p] == 0)
+            cout << p << " ";
+}
+ 
+// Driver Code
+int main()
+{
+    int n;
+    cout << "Please enter number n: ";
+    cin >> n;
+
+    cout << "\nAll the prime number(s) from two to " << n << ":" << endl;
+    SieveOfEratosthenes(n);
+    return 0;
+}*/
