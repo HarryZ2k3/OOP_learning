@@ -1,16 +1,17 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
+
 struct Phanso
 {
-    int mau;
-    int tu;
+    int tu1,mau1,tu2,mau2;
 };
 typedef struct Phanso PHANSO;
 
 void input(PHANSO& a)
 {
-    cin >> a.mau >> a.tu;
+    cin >> a.tu1 >> a.mau1 >> a.tu2 >> a.mau2;
 }
 
 int UCLN (int x,int y)
@@ -38,26 +39,55 @@ int UCLN (int x,int y)
 	return x;
 }
 
-void process(PHANSO& a)
+void Rutgon (int &n1,int &n2)
 {
-    if(a.mau==0)
-    {
-        cout << "mau phai khac 0. Nhap lai";
-    }
-    int ucln = UCLN(a.tu,a.mau);
-    a.tu = a.tu/ucln;
-    a.mau=a.mau/ucln;
+    int ucln = UCLN(n1,n2);
+    n1 = n1/ucln;
+    n2= n2/ucln;
 }
 
-void print(PHANSO a)
+void tong(PHANSO& a)
 {
-    cout << a.tu <<"/" << a.mau;
+    int mau_chung;
+    mau_chung = a.mau1*a.mau2;
+    int kq_tu= a.tu1 * (mau_chung/a.mau1)+ a.tu2 * (mau_chung/a.mau2);
+    Rutgon(kq_tu,mau_chung);
+    cout << "Tong:" <<kq_tu << "/" << mau_chung << endl;
 }
-int main() 
+
+void hieu(PHANSO& a)
 {
-    PHANSO kq;
-    input(kq);
-    process(kq);
-    print(kq);
+    int mau_chung = a.mau1*a.mau2;
+    int kq_tu= a.tu1 * (mau_chung/a.mau1) - a.tu2 * (mau_chung/a.mau2);
+    Rutgon(kq_tu,mau_chung);
+    cout << "Hieu:" <<kq_tu << "/" << mau_chung << endl;
+}
+
+void tich(PHANSO& a)
+{
+    int tich_tu = a.tu1*a.tu2;
+    int tich_mau = a.mau1*a.mau2;
+    
+    Rutgon(tich_tu,tich_mau);
+    cout << "Tich:" <<tich_tu << "/" << tich_mau << endl;
+}
+
+void thuong(PHANSO& a)
+{
+    int kq_tu = a.tu1 * a.mau2;
+    int kq_mau = a.mau1 * a.tu2;
+    Rutgon(kq_tu,kq_mau);
+    cout << "Thuong: " << kq_tu << "/" << kq_mau << endl;
+}
+
+int main()
+{
+    PHANSO ps;
+    input(ps);
+    tong(ps);
+    hieu(ps);
+    tich(ps);
+    thuong(ps);
+
     return 0;
 }
