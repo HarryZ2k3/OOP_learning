@@ -34,7 +34,7 @@ void process(NGAY& a)
             if (a.ngay == 1)
             {
                 a.ngay = 31;
-                a.thang == 12;
+                a.thang = 12;
                 a.nam -=1;
             }
             else
@@ -59,7 +59,7 @@ void process(NGAY& a)
         case 3:
             if (a.ngay==1)
             {
-                if (((a.nam % 4 == 0) && !(a.nam % 100 == 0))|| (a.nam % 400 == 0))
+                if (((a.nam % 4 == 0) && !(a.nam % 100 == 0)) || (a.nam % 400 == 0))
                 {
                         a.ngay = 29;
                         a.thang -=1;

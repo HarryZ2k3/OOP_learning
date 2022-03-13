@@ -3,11 +3,11 @@
 
 using namespace std;
 
-struct Sophuc
+struct Phanso
 {
     int a1,b1,a2,b2;
 };
-typedef struct Sophuc SOPHUC;
+typedef struct Phanso PHANSO;
 
 int UCLN (int x,int y)
 {
@@ -38,48 +38,45 @@ void Rutgon (int &n1,int &n2)
 {
     int ucln = UCLN(n1,n2);
     n1 = n1/ucln;
-    n2= n2/ucln;
+    n2 = n2/ucln;
 }
 
-void input(SOPHUC& a)
+void input(PHANSO& a)
 {
     cin >> a.a1 >> a.b1 >> a.a2 >> a.b2;
 }
 
-void tong(SOPHUC& a)
+void tong(PHANSO& a)
 {
     int tong_a = a.a1+a.a2;
     int tong_b = a.b1+a.b2;
     cout << "z+z'= " << tong_a << "+" << tong_b << endl;
 }
 
-void hieu(SOPHUC& a)
+void hieu(PHANSO& a)
 {
     int hieu_a = a.a1-a.a2;
     int hieu_b = a.b1-a.b2;
     cout << "z-z'= " << hieu_a << "+" << hieu_b  <<"i"<< endl;
 }
 
-void tich(SOPHUC& a)
+void tich(PHANSO& a)
 {
     cout << "z.z'= " << a.a1*a.a2 -a.b1*a.b2 << "+" << a.a1*a.b2+a.a2*a.b1 <<"i" <<endl;
 }
 
-void thuong(SOPHUC& a)
+void thuong(PHANSO& a)
 {
-    int mau1=a.a1*a.a1+a.b1*a.b1;
-    int mau2=a.a1*a.a1+a.b1*a.b1;
-    int tu1 = a.a2*a.a1+a.b2*a.b1;
-    int tu2 = a.a1*a.b2-a.a2*a.b1;
-    Rutgon(tu1,mau1);
-    Rutgon(tu2,mau2);
-    cout << "z/z'" << tu1 <<"/" << mau1 << "+" << tu2 <<"/" << mau2 << endl;
+    int tu3 =  a.a1*a.b2;
+    int mau3 = a.b1*a.a2;
+    Rutgon(tu3,mau3);
+    cout << a.a1 << "/" << a.b1 << "*" << a.a2 << "/"<< a.b2 << "=" << ;
 }
 
 int main()
 {
-    cout << "Nhap so 2 so phuc co dang z = a + bi va z' = a' +b'i:";
-    SOPHUC ps;
+    cout << "nhap tu va mau cua 2 phan so ban can tim theo thu tu tu1 mau1 ; tu2 mau2";
+    PHANSO ps;
     input(ps);
     tong(ps);
     hieu(ps);
