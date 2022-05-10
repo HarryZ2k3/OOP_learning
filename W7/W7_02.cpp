@@ -2,24 +2,28 @@
 
 using namespace std;
 
-class CDonThuc 
+class CSoPhuc 
 {
     private:
         int x;
         int y;
-        int z;
     public:
-        CDonThuc Tong(CDonThuc);
-        CDonThuc operator* (CDonThuc);
-        CDonThuc operator/ (CDonThuc);
-        CDonThuc operator*= (CDonThuc);
-        CDonThuc operator/= (CDonThuc);
+        CSoPhuc Tong(CSoPhuc);
+        CSoPhuc operator+ (CSoPhuc);
+        CSoPhuc operator- (CSoPhuc); 
+        CSoPhuc operator* (CSoPhuc);
+        CSoPhuc operator/ (CSoPhuc);
+        CSoPhuc operator+= (CSoPhuc);
+        CSoPhuc operator-= (CSoPhuc);
+        CSoPhuc operator*= (CSoPhuc);
+        CSoPhuc operator/= (CSoPhuc);
+        CSoPhuc operator++ (CSoPhuc);
+        CSoPhuc operator-- (CSoPhuc);
 }; 
 
 
-
-int main ()
+int main()
 {
-
+    
     return 0;
 }
