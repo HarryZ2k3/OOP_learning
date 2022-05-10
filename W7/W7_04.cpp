@@ -2,7 +2,25 @@
 
 using namespace std;
 
-class CPhanSo 
+class CDaThuc 
+{
+    private:
+        int x;
+        int y;
+        int z;
+    public:
+        CDaThuc Tong(CDaThuc);
+        CDaThuc operator+ (CDaThuc);
+        CDaThuc operator- (CDaThuc); 
+        CDaThuc operator* (CDaThuc);
+        CDaThuc operator/ (CDaThuc);
+        CDaThuc operator+= (CDaThuc);
+        CDaThuc operator-= (CDaThuc);
+        CDaThuc operator*= (CDaThuc);
+        CDaThuc operator/= (CDaThuc);
+        CDaThuc operator++ (CDaThuc);
+        CDaThuc operator-- (CDaThuc);
+}; 
 
 
 
