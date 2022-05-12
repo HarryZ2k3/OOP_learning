@@ -60,25 +60,5 @@ int main ()
     cout<<b<<d;
     cout<<c;
     cout<<a;
-    // kq=a+b;
-    // cout << "Tong: " <<kq;
-    // kq=a-b;
-    // cout << "Hieu: " <<kq;
-    // kq=a*b;
-    // cout << "Tich: " <<kq;
-    // kq=a/b;
-    // cout << "Thuong: " <<kq;
-    // b+=a;
-    // kq = b;
-    // cout << "Tong (Using +=): " <<kq;
-    // b-=a;
-    // kq =b;
-    // cout << "Hieu (Using -=): " <<kq;
-    // kq=a;
-    // kq++;
-    // cout << "a+1 (using ++) " <<kq;
-    // kq=b;
-    // kq--;
-    // cout << "b-1 (using --) " <<kq;
     return 0;
 }
