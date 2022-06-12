@@ -2,101 +2,101 @@
 
 using namespace std;
 
-class CDiem
+class CNgay
 {
     private:
-        float toan;
-        float van;
-        float anh;
-        float dtb;
+        int ngay;
+        int thang;
+        int nam;
+        int cach;
     public:
-        friend istream& operator>>(istream &is,CDiem&x);
-        friend ostream& operator<<(ostream &os,CDiem&x);
-        CDiem operator-(CDiem);
-        int operator>(CDiem);
-        int operator<(CDiem);
-        int operator>=(CDiem);
-        int operator<=(CDiem);
-        int operator==(CDiem);
-        int operator!=(CDiem);
+        friend istream& operator>>(istream &is,CNgay&x);
+        friend ostream& operator<<(ostream &os,CNgay&x);
+        CNgay operator-(CNgay);
+        int operator>(CNgay);
+        int operator<(CNgay);
+        int operator>=(CNgay);
+        int operator<=(CNgay);
+        int operator==(CNgay);
+        int operator!=(CNgay);
 };
-istream& operator>>(istream &is,CDiem &x)
+istream& operator>>(istream &is,CNgay &x)
 {
-    cout << "Nhap diem van:" << endl;
-    is >> x.van;
-    cout << "Nhap diem toan" << endl;
-    is >> x.toan;
-    cout << "Nhap diem anh" << endl;
-    is >> x.anh;
+    cout << "Nhap diem thang:" << endl;
+    is >> x.thang;
+    cout << "Nhap diem ngay" << endl;
+    is >> x.ngay;
+    cout << "Nhap diem nam" << endl;
+    is >> x.nam;
     return is;
 }
 
-ostream& operator<<(ostream &os,CDiem &x)
+ostream& operator<<(ostream &os,CNgay &x)
 {
-    cout << "Van";
-    os << x.van;
-    cout << endl << "Toan";
-    os << x.toan;
-    cout << endl << "anh ";
-    os << x.anh;
+    cout << "thang";
+    os << x.thang;
+    cout << endl << "ngay";
+    os << x.ngay;
+    cout << endl << "nam ";
+    os << x.nam;
     return os;
 }
-CDiem CDiem::operator-(CDiem x)
+CNgay CNgay::operator-(CNgay x)
 {
-    CDiem temp;
-    temp.dtb = (x.toan+x.van+x.anh)/3;
+    CNgay temp;
+    temp.cach = (ngay-x.ngay);
     return temp;
 }
 
-int CDiem::operator>(CDiem x)
+int CNgay::operator>(CNgay x)
 {
-    CDiem temp = *this-x;
-    if (temp.dtb>50)
+    CNgay temp = *this-x;
+    if (temp.cach>50)
         return 1;
     else 
         return 0;
 }
 
-int CDiem::operator<(CDiem x)
+int CNgay::operator<(CNgay x)
 {
-    CDiem temp = *this-x;
-    if (temp.dtb<50)
+    CNgay temp = *this-x;
+    if (temp.cach<50)
         return 1;
     else 
         return 0;
 }
 
-int CDiem::operator<=(CDiem x)
+int CNgay::operator<=(CNgay x)
 {
-   CDiem temp = *this-x;
-    if (temp.dtb<=50)
+   CNgay temp = *this-x;
+    if (temp.cach<=50)
         return 1;
     else 
         return 0;
 }
 
-int CDiem::operator>=(CDiem x)
+int CNgay::operator>=(CNgay x)
 {
-    CDiem temp = *this-x;
-    if (temp.dtb>=50)
+    CNgay temp = *this-x;
+    if (temp.cach>=50)
         return 1;
     else 
         return 0;
 }
 
-int CDiem::operator==(CDiem x)
+int CNgay::operator==(CNgay x)
 {
-    CDiem temp = *this-x;
-    if (temp.dtb == 50)
+    CNgay temp = *this-x;
+    if (temp.cach == 50)
         return 1;
     else 
         return 0;
 }
 
-int CDiem::operator!=(CDiem x)
+int CNgay::operator!=(CNgay x)
 {
-    CDiem temp = *this-x;
-    if (temp.dtb!=50)
+    CNgay temp = *this-x;
+    if (temp.cach!=50)
         return 1;
     else 
         return 0;
